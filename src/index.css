@@ -16,6 +16,9 @@ code {
 html,
 body {
   height: 100%;
+
+  /* background-color: #E2E2E0; */
+  background-color: #C3CBE3;
 }
 /* 
 #root {
