@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
-}
+@import '~antd/dist/antd.css';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game {
   display: flex;
-  flex-direction: column;
+  margin: 50px auto;
+}
+
+.game * {
+  box-sizing: content-box;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-right: none;
+
+}
+
+.square:nth-child(18n) {
+  border-right: 2px solid black;
+}
+
+.square:nth-child(n+307) {
+  border-bottom: 2px solid black;
+}
+
+.chess {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  height: 900px;
+  margin: 10px auto;
+  position: relative;
+  margin: auto;
+}
+
+.chess-box {
+  padding: 30px;
+  background: #DCE2F1;
+  width: 965px;
+  height: 965px;
+  display: flex;
+  margin: auto;
+  position: relative;
+  border-radius: 15px;
+  border: 2px solid #0D2464;
+  box-shadow: 0 0 3px 0px #474747;
+}
+
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+}
+
+.dot1 {
+  top: 446px;
+  left: 446px;
+}
+
+.dot2 {
+  top: 146px;
+  left: 146px;
+}
+
+.dot3 {
+  right: 144px;
+  top: 146px;
+}
+
+.dot4 {
+  bottom: 144px;
+  left: 146px;
+}
+
+.dot5 {
+  bottom: 144px;
+  right: 144px;
+}
+
+.black-pieces {
+  background: #878787;
+  box-shadow: inset -16px -16px 20px 0 #1c1c1c, 0px 0px 3px 0 #515151;
+}
+
+.white-pieces {
+  background: #ffffff;
+  box-shadow: inset -20px -11px 20px 0 #d6d6d6, 0px 0px 5px 0 #b5b5b5;
+}
+
+.presuppose {
+  width: 933px;
+  height: 967px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  box-sizing: border-box;
+  padding-top: 17px;
+}
+
+.presuppose-row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.presuppose-item {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.presuppose-item-small {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.presuppose-item:nth-child(18n) {
+  margin-right: 14px;
+}
+
+.presuppose-row:nth-child(18) {
+  margin-bottom: 13px;
+}
+
+.black-pieces {
+  background: #878787;
+  box-shadow: inset -16px -16px 20px 0 #1c1c1c, 0px 0px 3px 0 #515151;
+}
+
+.white-pieces {
+  background: #ffffff;
+  box-shadow: inset -20px -11px 20px 0 #d6d6d6, 0px 0px 5px 0 #b5b5b5;
+}
+
+.history {
+  background: #e2c88d;
+  margin: 0 40px 0 0;
+  border-radius: 5px;
+  color: #705830;
+  box-shadow: 0 0 3px 0px #474747;
+  width: 146px;
+
+
+}
+.history-header {
+  height: 24px;
+  line-height: 24px;
+  background: #8d703e;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 6px;
+}
+
+.history-content {
+  height: 931px;
+  overflow: auto;
+}
+
+.history-content>div {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  padding: 0 10px 0;
+  margin-bottom: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.step {
+  width: 25px;
+  color: #ffffff;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.step-button {
+  width: 30px;
+  height: 20px;
+  background: #2bd282bf;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #f8f8f8;
+  cursor: pointer;
+  margin-left: 4px;
 }
